@@ -63,10 +63,7 @@ public class piToTheNth {
 	    			
 	    	  }
 	      
-	      static String removeSpaces(String str) {
-	    	  str.replaceAll(" ", "");
-	    	  return str;
-	      }
+	     
 	    	    
 	      
 	  }
