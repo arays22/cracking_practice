@@ -10,7 +10,7 @@ import org.jsoup.select.Elements;
 public class piToTheNth {
 
 	
-	String pi = "1415926535897932384626433832795028"
+	static String pi = "1415926535897932384626433832795028"
 			+ "841971693993751058209749445923"
 			+ "0781640628620899862803482534211706798214808651328230664709384460"
 			+ "9550582231725359408128481117450284102701938521105559644622948954"
@@ -27,8 +27,15 @@ public class piToTheNth {
 			+ "4468503526193118817101000313783875288658753320838142061717766914"
 			+ "7303598253490428755468731159562863882353787593751957781857780532"
 			+ "171226806613001927876611195909216420198";
+			
 
-	      public static void main(String[] args) throws IOException {
+			static void digitsOfPi(int digits) {
+				for (int i = 0; i < pi.length() - digits; i++){
+				    char c = pi.charAt(i);        
+				    System.out.println(Character.toString(c));
+				}
+			}
+			public static void main(String[] args) throws IOException {
 
 	    	  Document doc = Jsoup.connect("https://www.angio.net/pi/digits.html").get();
 
