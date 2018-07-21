@@ -29,15 +29,18 @@ public class piToTheNth {
 			+ "171226806613001927876611195909216420198";
 			
 
-			static void digitsOfPi(int digits) {
-				for (int i = 0; i < pi.length() - digits; i++){
-				    char c = pi.charAt(i);        
-				    System.out.println(Character.toString(c));
+			static void digitsOfPi(int digit) {
+				
+				for (int i = 0; i < pi.length(); i++) {
+					if (i <= digit) {
+						System.out.print(pi.charAt(i));
+				}
 				}
 			}
-			public static void main(String[] args) throws IOException {
+			
+			public static void main(String[] args) {
 
-	    	  Document doc = Jsoup.connect("https://www.angio.net/pi/digits.html").get();
+	    	 // Document doc = Jsoup.connect("https://www.angio.net/pi/digits.html").get();
 
 	          //String htmlString = "<html><head><title>My title</title></head>"
 	                  //+ "<body>Body content</body></html>";
@@ -53,10 +56,10 @@ public class piToTheNth {
 	    	   // System.out.println(p.text());
 	    	 // Elements ps = doc.select("div[id=articleBody] > p");
 	    	  //for (Element p : ps) {
-	    	  String text = removeSpaces(doc.select("tt").text());
+	    	  //String text = removeSpaces(doc.select("tt").text());
 	    		  //System.out.println(text);
-	    		  
-	    		  
+	    		  System.out.print("3.");
+	    		  digitsOfPi(4);
 	    			
 	    	  }
 	      
